@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "SLogo"
+date:   2013-10-22 01:33:37
+categories: project
+---
+
+I would like to talk about how we finish the SLogo game in Java.

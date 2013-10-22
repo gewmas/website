@@ -1,0 +1,18 @@
+url: yuhuamai.com
+resume: /resume/Yuhua Mai-resume.pdf 
+markdown: redcarpet
+pygments: true
+auto: true
+ftp_host: yuhuamai.com
+ftp_dir: /yuhuamai
+ftp_passive: false
+
+embedly:
+  api_key: 403b4399222b4f6cac24889a7ac0906e
+
+  soundcloud:
+    color: 0066FF # SoundCloud specific parameter for colorful players
+    width: 500px
+
+  vimeo:
+    width: 500px
