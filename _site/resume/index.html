@@ -21,6 +21,9 @@
 
   <style>
 
+    span.tab{
+        padding: 0 20px; /* Or desired space*/
+    }
   /*body
   {
     background-color:#b0c4de;
@@ -37,14 +40,34 @@
 
   <div class="site">
     <div class="header">
-      <h1 class="title"><a href="/"></a></h1>
-      <a class="extra" href="/">home</a>
-      <a class="extra" href="/resume">resume</a>
-      <a class="extra" href="/about">about</a>
+      
+          <h1 class="title"><a href="/">Home</a></h1><span class="tab"></span>
+          <h1 class="title"><a href="/resume">Resume</a></h1><span class="tab"></span>
+          <h1 class="title"><a href="/archive">Archive</a></h1><span class="tab"></span>
+          <h1 class="title"><a href="/about">About</a></h1><span class="tab"></span>
+     
+      
+
+      <!-- 
+      <h1 class="title"><a href="/about/index.html">About Me</a></h1>
+      <span> </span>
+      
+      <h1 class="title"><a href="/archive/index.html">Archive</a></h1>
+      <span> </span>
+      
+      <h1 class="title"><a href="/index.html">Home</a></h1>
+      <span> </span>
+      
+      <h1 class="title"><a href="/resume/index.html">Resume</a></h1>
+      <span> </span>
+       -->
     </div>
 
     <div id="main" class="main">
-      <a class="embedly-card" href="yuhuamai.com/profile/Yuhua Mai-Resume.pdf">None</a>
+      <a href="http://yuhuamai.com/profile/Yuhua Mai-Resume.pdf">Click here to download my resume.</a></p>
+<embed src="http://yuhuamai.com/profile/Yuhua Mai-Resume.pdf" width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+
+<!-- <a class="embedly-card" href="yuhuamai.com/profile/Yuhua Mai-Resume.pdf">None</a> -->
 <script>!function(a){var b="embedly-platform",c="script";if(!a.getElementById(b)){var d=a.createElement(c);d.id=b,d.src=("https:"===document.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";var e=document.getElementsByTagName(c)[0];e.parentNode.insertBefore(d,e)}}(document);</script>
 
 </div>
@@ -53,15 +76,19 @@
     <div class="footer">
       <div class="contact">
         <p>
-          Yuhua Mai<br />
-          Students at Duke<br />
-          myhgew@gmail.com
+          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png"></a><br />
         </p>
       </div>
+      
       <div class="contact">
         <p>
-          <a href="https://github.com/myhgew">github.com/myhgew</a><br />
-          <!-- <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br /> -->
+          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png"></a>
+        </p>
+      </div>
+
+      <div class="contact">
+        <p>
+          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-24.png"></a><br />
         </p>
       </div>
     </div>

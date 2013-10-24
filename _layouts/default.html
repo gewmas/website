@@ -21,6 +21,9 @@
 
   <style>
 
+    span.tab{
+        padding: 0 20px; /* Or desired space*/
+    }
   /*body
   {
     background-color:#b0c4de;
@@ -37,10 +40,18 @@
 
   <div class="site">
     <div class="header">
-      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-      <a class="extra" href="/">home</a>
-      <a class="extra" href="/resume">resume</a>
-      <a class="extra" href="/about">about</a>
+      
+          <h1 class="title"><a href="/">Home</a></h1><span class="tab"></span>
+          <h1 class="title"><a href="/resume">Resume</a></h1><span class="tab"></span>
+          <h1 class="title"><a href="/archive">Archive</a></h1><span class="tab"></span>
+          <h1 class="title"><a href="/about">About</a></h1><span class="tab"></span>
+     
+      
+
+      <!-- {% for page in site.pages %}
+      <h1 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+      <span> </span>
+      {% endfor %} -->
     </div>
 
     <div id="main" class="main">
@@ -50,15 +61,19 @@
     <div class="footer">
       <div class="contact">
         <p>
-          Yuhua Mai<br />
-          Students at Duke<br />
-          myhgew@gmail.com
+          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png"></a><br />
         </p>
       </div>
+      
       <div class="contact">
         <p>
-          <a href="https://github.com/myhgew">github.com/myhgew</a><br />
-          <!-- <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br /> -->
+          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png"></a>
+        </p>
+      </div>
+
+      <div class="contact">
+        <p>
+          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-24.png"></a><br />
         </p>
       </div>
     </div>

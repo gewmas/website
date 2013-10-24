@@ -1,0 +1,10 @@
+---
+layout: project
+title:  "CPS308_2D Scrolling Shooting Game"
+date:   2013-9-1 08:33:37
+categories: project
+---
+
+I would like to talk about how we finish the 2D Scrolling game in Java.
+
+<a href="https://github.com/myhgew/CPS308_Game"><img src="../../../../asset/main/github-6-32.png"></a>
