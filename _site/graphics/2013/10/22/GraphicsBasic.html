@@ -19,144 +19,308 @@
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
   <link rel="stylesheet" href="/css/pygment_trac.css" type="text/css" media="screen, projection" />
 
-  <style>
 
-    span.tab{
-        padding: 0 20px; /* Or desired space*/
-    }
+
+  <style type="text/css">
+
+
+  span.tab{
+    padding: 0 20px; /* Or desired space*/
+  }
   /*body
   {
     background-color:#b0c4de;
-  }*/
+    }*/
 
   /*.main
   {
     background-color:#d5d8d9;
-  }*/
-  </style>
+    }*/
 
-</head>
-<body>
+    /*div.main {background-color:#e1efbb;}*/
 
-  <div class="site">
-    <div class="header">
-      
-          <h1 class="title"><a href="/">Home</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/resume">Resume</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/archive">Archive</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/about">About</a></h1><span class="tab"></span>
-     
-      
+    div.header
+    {
+      width:100%;
+      height:63px;
+    }
+    div.header ul
+    {
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div.header li
+    {
+      float:left;
+    }
+    div.header a
+    {
+      display:block;
+      width:86px;
+    }
+    div.header a:link,div.header a:visited
+    {
+      font-weight:bold;
+      color:#FFFFFF;
+      background-color:#98bf21;
+      text-align:center;
+      padding:4px;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    div.header a:hover,div.header a:active
+    {
+      background-color:#7A991A;
+    }
 
-      <!-- 
-      <h1 class="title"><a href="/about/index.html">About Me</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/archive/index.html">Archive</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/index.html">Home</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/resume/index.html">Resume</a></h1>
-      <span> </span>
-       -->
-    </div>
+    img.contact
+    {
+      width:32px;
+      height:32px;
+      transition:width 2s, height 2s;
+      -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    }
 
-    <div id="main" class="main">
-      <h2>Graphics Basic</h2>
-<p class="meta">22 Oct 2013</p>
+    img.contact:hover
+    {
+      width:32px;
+      height:32px;
+      transform:rotate(-30deg);
+      -webkit-transform:rotate(-30deg); /* Safari and Chrome */
+    }
+    
 
-<div class="post">
-<ol>
-    <li>
-        <h1>Graphics Basic</h1>
+    </style>
+
+  </head>
+  <body>
+
+    <div class="site">
+      <div class="header">
         <ul>
-            <li>
-                <h2>Pixel</h2>
-                <p>
-                    1 bit grayscale</br>
-                    8 bit RGB (24 bits/pixel)</br>
-                    16 bit RBG (48 bits/pixel)</br>
-                </p>
-            </li>
-            <li>
-                <h2>2D transformations</h2>
-                <p>
-                    Translation</br>
-                    <img src="../../../../asset/graphics/translation.png"></br>
-                    Scaling</br>
-                    <img src="../../../../asset/graphics/scaling.png"></br>
-                    Rotation about z-axis</br>
-                    <img src="../../../../asset/graphics/rotationAboutZ.png"></br>
-                    Rotation about x-axis</br>
-                    <img src="../../../../asset/graphics/rotationAboutX.png"></br>
-                    Rotation about y-axis</br>
-                    <img src="../../../../asset/graphics/rotationAboutY.png"></br>
-                    Rotation about point</br>
-                    <img src="../../../../asset/graphics/rotationAboutPoint.png"></br>
-                    Rotation about axis</br>
-                    
-<div class="highlight"><pre><code class="c++">                      <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// z axis</span>
-                        <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-                    
-</code></pre></div>
-
-                    <img src="../../../../asset/graphics/rotationAboutVector1.png"></br>
-                    <img src="../../../../asset/graphics/rotationAboutVector2.png"></br>
-                </p>
-            </li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
-    </li>
-    <li>
-        <h1>OpenGL Drawing</h1>
-        <p>
-            Basic OpenGL function:
-            
-<div class="highlight"><pre><code class="c++">          <span class="kt">void</span> <span class="nf">glColor3f</span><span class="p">(</span><span class="n">GLfloat</span> <span class="n">red</span><span class="p">,</span> <span class="n">GLfloat</span> <span class="n">green</span><span class="p">,</span> <span class="n">GLfloat</span> <span class="n">blue</span><span class="p">);</span>
-            <span class="kt">void</span> <span class="nf">glRotatef</span><span class="p">(</span><span class="n">GLdouble</span> <span class="n">angle</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">x</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">y</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">z</span><span class="p">);</span> 
-            <span class="cm">/*mode - GL POINTS, GL LINES,GL LINE STRIP, GL LINE LOOP GL TRIANGLES, GL TRIANGLE STRIP,</span>
-<span class="cm">           GL TRIANGLE FAN, GL QUADS, GL QUAD STRIP, and GL POLYGON*/</span>
-            <span class="kt">void</span> <span class="nf">glBegin</span><span class="p">(</span><span class="n">GLenum</span> <span class="n">mode</span><span class="p">);</span> <span class="n">glEnd</span><span class="p">();</span>
-            
+      </div>
+
+      <div class="main">
+        <style>
+    /*#menu ul li {
+        display:none;
+    }
+
+    #menu span {
+        color: #ace;
+    }
+    li {
+        list-style-type: none;
+        }*/
+        </style>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>
+
+
+        $(window).load(function () {
+
+
+          $("#menu span").click(function(){
+            $(this).first().parent().children("ul").children().toggle();
+            if($(this).html().charAt(0)  == "\u25bc"){
+              $(this).html("&#x25b6;");
+
+            } else {
+              $(this).html("&#x25bc;");
+
+            }
+            return false;
+          });
+
+
+        });
+
+        </script>
+
+        <h2>Graphics Basic</h2>
+        <p class="meta">22 Oct 2013</p>
+
+        <div class="post">
+          <ul id="menu">
+    <li><span>&#x25bc;</span><b>Graphics Basic</b>
+    <ul>
+        <li><h2>Pixel</h2></li>
+            <p>
+                1 bit grayscale</br>
+                8 bit RGB (24 bits/pixel)</br>
+                16 bit RBG (48 bits/pixel)</br>
+            </p>
+        
+        <li><h2>2D transformations</h2></li>
+            <p>
+                Translation</br>
+                <img src="../../../../asset/graphics/translation.png"></br>
+                Scaling</br>
+                <img src="../../../../asset/graphics/scaling.png"></br>
+                Rotation about z-axis</br>
+                <img src="../../../../asset/graphics/rotationAboutZ.png"></br>
+                Rotation about x-axis</br>
+                <img src="../../../../asset/graphics/rotationAboutX.png"></br>
+                Rotation about y-axis</br>
+                <img src="../../../../asset/graphics/rotationAboutY.png"></br>
+                Rotation about point</br>
+                <img src="../../../../asset/graphics/rotationAboutPoint.png"></br>
+                Rotation about axis</br>
+                
+<div class="highlight"><pre><code class="c++">              <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// z axis</span>
+                <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+                
 </code></pre></div>
 
+                <img src="../../../../asset/graphics/rotationAboutVector1.png"></br>
+                <img src="../../../../asset/graphics/rotationAboutVector2.png"></br>
+            </p>
+    </ul>
+    </li>
+
+    <li><span>&#x25b6;</span><b>OpenGL Drawing</b>
+    <p>
+        Basic OpenGL function:
+        
+<div class="highlight"><pre><code class="c++">      <span class="kt">void</span> <span class="nf">glColor3f</span><span class="p">(</span><span class="n">GLfloat</span> <span class="n">red</span><span class="p">,</span> <span class="n">GLfloat</span> <span class="n">green</span><span class="p">,</span> <span class="n">GLfloat</span> <span class="n">blue</span><span class="p">);</span>
+        <span class="kt">void</span> <span class="nf">glRotatef</span><span class="p">(</span><span class="n">GLdouble</span> <span class="n">angle</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">x</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">y</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">z</span><span class="p">);</span> 
+        <span class="cm">/*mode - GL POINTS, GL LINES,GL LINE STRIP, GL LINE LOOP GL TRIANGLES, GL TRIANGLE STRIP,</span>
+<span class="cm">       GL TRIANGLE FAN, GL QUADS, GL QUAD STRIP, and GL POLYGON*/</span>
+        <span class="kt">void</span> <span class="nf">glBegin</span><span class="p">(</span><span class="n">GLenum</span> <span class="n">mode</span><span class="p">);</span> <span class="n">glEnd</span><span class="p">();</span>
+        
+</code></pre></div>
+
+    </p>
+    <p>
+        <script src="https://gist.github.com/myhgew/5f82ed47097eb06baa91.js"></script>
+    </p>
+    </li>
+
+    <li><span>&#x25b6;</span><b>Shading</b>
+    <ul>
+        <li>Diffuse</li>
+        <p> Energy from light source depends on angle to light source. </br>
+            Max illumination - surface directly toward light source. </br>
+            Min illumination - surfacetangent to light source. </br>
+            L_d = k_d * I * max(0, n {dot product} l) </br>
         </p>
+        <li>Specular</li>
         <p>
-            <script src="https://gist.github.com/myhgew/5f82ed47097eb06baa91.js"></script>
+            Reflection brightest when v and i are symmetric across surface normal. </br>
+            h = bisector(v, l) </br>
+            L_s = k_s * I * max(0, n {dot product} h)^p </br>
         </p>
+        <li>Ambient</li>
+        <p>
+            Independent of everything, add constant color, fill in black shadow. </br>
+            L_a = k_a * I_a </br>
+        </p>
+    </ul>
     </li>
     <li>
-        <h1>Shading</h1>
+    <span>&#x25b6;</span><h1>Perspective and Viewing</h1>
+    <ul id="menu">
+        <li>Orthographic Projection</li>
+        <ul>
+            <li>Mechanical and architectural drawings</li>
+            <li>Parallel lines are parallel!</li>
+            <li>Preserve size and shape</li>
+        </ul>
         <p>
+            ray direction -> -w </br>
+            ray origin(s) -> e + uu+ vv
         </p>
-    </li>
-    <li>
-        <h1>Viewing</h1>
+        <li>Perspective Projection</li>
+        <ul>
+            <li>Pass through a single point</li>
+            <li>Not parallel to each other</li>
+            <li>Not perpendicular to image plane</li>
+        </ul>
         <p>
+            ray direction -> e + uu + vv - dw </br>
+            ray origin(s) -> e
         </p>
-    </li>
-    <li>
-        <h1>Texture Mapping</h1>
+        <li>Pixel to image map</li>
         <p>
+            u = l + (r-l)(i+0.5)/n_x </br>
+            v = b + (t-b)(j+0.5)/n_y </br>
         </p>
+        <li>OrthoNormal camera frame</li>
+        <ul>
+            <li>u, v, w</li>
+            <li>right-handed</li>
+            <li>v up!</li>
+            <li>view-direction -w</li>
+        </ul>
+    </ul>
     </li>
-    <li>
-        <h1>Sampling and Reconstruction</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Ray Tracing</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Line Drawing</h1>
-        <p>
-        </p>
-    </li>
-</ol>
+    <span>&#x25b6;</span><li><h1>Texture Mapping</h1></li>
+    <p>
+        A technique of defining surface properties (expecially shading parameters) in such a way that they vary as a function of position on the surface. </br>
+        A general technique for storing and evaluating functions.
+    </p>
+    <span>&#x25b6;</span><li><h1>Sampling and Reconstruction</h1></li>
+    <p>
+        Convolution, (a*b)[i] = SIMGA(j) a[j]b[i-j]
+    </p>
+    <h1>Filter</h1>
+    <ul>
+        <li>Box filter</li>
+        <li>Tent filter</li>
+        <li>Gaussian filter</li>
+        <li>B-Spline cubic</li>
+        <li>Catmull-Rom cubic</li>
+    </ul>
+    <h1>Near the edge</h1>
+    <ul>
+        <li>clip filter(black)</li>
+        <li>wrap around</li>
+        <li>copy edge</li>
+        <li>reflect across edge</li>
+        <li>vary filter near edge</li>
+    </ul>
+    <span>&#x25b6;</span><li><h1>Ray Tracing</h1></li>
+    <p>
+        
+<div class="highlight"><pre><code class="java">     <span class="k">for</span><span class="o">(</span><span class="n">each</span> <span class="n">pixel</span><span class="o">){</span>
+        <span class="n">compute</span> <span class="n">viewing</span> <span class="n">ray</span>
+        <span class="n">intersect</span> <span class="n">ray</span> <span class="n">with</span> <span class="n">scene</span>
+        <span class="n">compute</span> <span class="n">illumination</span> <span class="n">at</span> <span class="n">visbile</span> <span class="n">point</span>
+        <span class="n">put</span> <span class="n">result</span> <span class="n">into</span> <span class="n">image</span>
+    <span class="o">}</span>
+    
+</code></pre></div>
+
+</p>
+<span>&#x25b6;</span><li><h1>Line Drawing</h1></li>
+<p>
+    
+<div class="highlight"><pre><code class="c++">  <span class="c1">//y = b + mx;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">x0</span><span class="p">);</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">round</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">b</span><span class="p">);</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="o">-</span><span class="n">y</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">floor</span><span class="p">(</span><span class="n">xl</span><span class="p">))</span>
+    <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">d</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">){</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">d</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">d</span> <span class="o">+=</span> <span class="n">m</span><span class="p">;</span>
+<span class="n">output</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</p>
+</li>
+</ul>
 
 <div id="reference">
     <h1>Reference</h1>
@@ -165,65 +329,59 @@
     </p>
 </div>
 
-</div>
+        </div>
 
-<div id="related">
-  <h2>Related Posts</h2>
-  <ul class="posts">
-    
-      <li><span>22 Oct 2013</span> &raquo; <a href="/design_pattern/2013/10/22/DesignPatternSummary.html">Design Pattern Summary</a></li>
-    
-      <li><span>21 Oct 2013</span> &raquo; <a href="/life/2013/10/21/HelloWorld.html">Hello World</a></li>
-    
-      <li><span>21 Oct 2013</span> &raquo; <a href="/project/2013/10/21/2013-10-22-CPS308_SLogo.html">CPS308_SLogo</a></li>
-    
-  </ul>
-</div>
+        <div id="related">
+          <h2>Related Posts</h2>
+          <ul class="posts">
+            
+            <li><span>24 Oct 2013</span> &raquo; <a href="/leetcode/2013/10/24/LengthOfLastWord.html">Length of Last Word</a></li>
+            
+            <li><span>22 Oct 2013</span> &raquo; <a href="/design_pattern/2013/10/22/DesignPatternSummary.html">Design Pattern Summary</a></li>
+            
+            <li><span>21 Oct 2013</span> &raquo; <a href="/life/2013/10/21/HelloWorld.html">Hello World</a></li>
+            
+          </ul>
+        </div>
 
-<!--  -->
-    </div>
-
-    <div class="footer">
-      <div class="contact">
-        <p>
-          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png"></a><br />
-        </p>
-      </div>
-      
-      <div class="contact">
-        <p>
-          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png"></a>
-        </p>
+        <!--  -->
       </div>
 
-      <div class="contact">
+      <div class="footer">
         <p>
-          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-24.png"></a><br />
+          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png" class="contact"></a>
+        </p>
+
+        <p>
+          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png" class="contact"></a>
+        </p>
+
+        <p>
+          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-32.png" class="contact"></a>
         </p>
       </div>
     </div>
-  </div>
 
-  <!-- ClickTale Bottom part -->
-  <div id="ClickTaleDiv" style="display: none;"></div>
-  <script type="text/javascript">
-  if(document.location.protocol!='https:')
-    document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
-  </script>
-  <!-- ClickTale end of Bottom part -->
+    <!-- ClickTale Bottom part -->
+    <div id="ClickTaleDiv" style="display: none;"></div>
+    <script type="text/javascript">
+    if(document.location.protocol!='https:')
+      document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+    </script>
+    <!-- ClickTale end of Bottom part -->
 
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  var pageTracker = _gat._getTracker("UA-6016902-1");
-  pageTracker._trackPageview();
-  </script>
-  <!-- Google Analytics end -->
-</body>
-</html>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-6016902-1");
+    pageTracker._trackPageview();
+    </script>
+    <!-- Google Analytics end -->
+  </body>
+  </html>

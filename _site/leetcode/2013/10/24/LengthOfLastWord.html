@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Design Pattern Summary</title>
+  <title>Length of Last Word</title>
   <meta name="viewport" content="width=device-width">
 
   <!-- syntax highlighting CSS -->
@@ -144,60 +144,37 @@
 
         </script>
 
-        <h2>Design Pattern Summary</h2>
-        <p class="meta">22 Oct 2013</p>
+        <h2>Length of Last Word</h2>
+        <p class="meta">24 Oct 2013</p>
 
         <div class="post">
-          <h1>Delegation Pattern</h1>
-
-<p>Delegation allows objects to share behavior without using inheritance and without duplicating code. Delegation decreases the number of responsibilities of an object and their corresponding implementation sizes.</p>
+          <h1>Question</h1>
 
 <p>
-    <script src="https://gist.github.com/myhgew/f0d939dbb41781a52def.js"></script>
+    Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string. </br>
+    If the last word does not exist, return 0.</br>
+    Note: A word is defined as a character sequence consists of non-space characters only.</br>
+    For example,</br>
+    Given s = "Hello World",</br>
+    return 5.
 </p>
 
-<h1>Substitution Pattern</h1>
-
-<p>Substitution permits objects to alter (or compose) their implementations on-the-fly at run-time, rather than strictly at compile-time.</p>
+<h1>Analysis</h1>
 
 <p>
-    <script src="https://gist.github.com/myhgew/38db0f227a0b56c2cfdd.js"></script>
+    It is pretty straightforward that to scan the string once with O(n) running time. While scanning, keep record of the length of the last word. However, there may be multiple spaces at the end of the string, then an extra vairable need to be used to store the length of the word before the spaces. The previousResult in the following code should only be updated when the currentResult is not 0.
 </p>
 
-<h1>Composite Pattern</h1>
+<h1>Result</h1>
 
 <p>
-
-</p>
-
-<h1>Strategy Pattern</h1>
-
-<p>
-
-</p>
-
-<h1>Decoration Pattern</h1>
-
-<p>
-
-</p>
-
-<h1>Factory Pattern</h1>
-
-<p>
-
-</p>
-
-<h1>Iterator Pattern</h1>
-
-<p>
-
+    <script src="https://gist.github.com/myhgew/6652f4b50ade9ccc0556.js"></script>
 </p>
 
 <div id="reference">
     <h1>Reference</h1>
     <p>
-        <a href='http://people.scs.carleton.ca/~deugo/papers/foundation.pdf'>Foundation Patterns</a>
+        <a href='http://fisherlei.blogspot.com/2012/12/leetcode-length-of-last-word.html'>Length of Last Word</a>
     </p>
 </div>
 
@@ -207,9 +184,9 @@
           <h2>Related Posts</h2>
           <ul class="posts">
             
-            <li><span>24 Oct 2013</span> &raquo; <a href="/leetcode/2013/10/24/LengthOfLastWord.html">Length of Last Word</a></li>
-            
             <li><span>22 Oct 2013</span> &raquo; <a href="/graphics/2013/10/22/GraphicsBasic.html">Graphics Basic</a></li>
+            
+            <li><span>22 Oct 2013</span> &raquo; <a href="/design_pattern/2013/10/22/DesignPatternSummary.html">Design Pattern Summary</a></li>
             
             <li><span>21 Oct 2013</span> &raquo; <a href="/life/2013/10/21/HelloWorld.html">Hello World</a></li>
             

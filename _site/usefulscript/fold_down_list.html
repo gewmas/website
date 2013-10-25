@@ -1,0 +1,66 @@
+<html>
+<head>
+    <style>
+    #menu ul li {
+        display:none;
+    }
+
+    #menu span {
+        color: #ace;
+    }
+    li {
+        list-style-type: none;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+
+
+    $(window).load(function () {
+
+
+        $("#menu span").click(function(){
+            $(this).first().parent().children("ul").children().toggle();
+            if($(this).html().charAt(0)  == "\u25b6"){
+                $(this).html("&#x25bc;");
+
+            } else {
+                $(this).html("&#x25b6;");
+
+            }
+            return false;
+        });
+
+
+    });
+
+    </script>
+    </head>
+    <body>
+        <ul id="menu">
+            <li>
+                <span>&#x25b6;</span><a href="http://google.com">Page 1</a>
+                <ul>
+                    <li>
+                        thing 1
+                    </li>
+                    <li>
+                        thing 2
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>&#x25b6;</span><a href="">Page 2</a>
+                <ul>
+                    <li>
+                        thing 1
+                    </li>
+                    <li>
+                        thing 2
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </body>
+</html>

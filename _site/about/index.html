@@ -19,95 +19,132 @@
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
   <link rel="stylesheet" href="/css/pygment_trac.css" type="text/css" media="screen, projection" />
 
-  <style>
 
-    span.tab{
-        padding: 0 20px; /* Or desired space*/
-    }
+
+  <style type="text/css">
+
+
+  span.tab{
+    padding: 0 20px; /* Or desired space*/
+  }
   /*body
   {
     background-color:#b0c4de;
-  }*/
+    }*/
 
   /*.main
   {
     background-color:#d5d8d9;
-  }*/
-  </style>
+    }*/
 
-</head>
-<body>
+    /*div.main {background-color:#e1efbb;}*/
 
-  <div class="site">
-    <div class="header">
-      
-          <h1 class="title"><a href="/">Home</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/resume">Resume</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/archive">Archive</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/about">About</a></h1><span class="tab"></span>
-     
-      
+    div.header
+    {
+      width:100%;
+      height:63px;
+    }
+    div.header ul
+    {
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div.header li
+    {
+      float:left;
+    }
+    div.header a
+    {
+      display:block;
+      width:86px;
+    }
+    div.header a:link,div.header a:visited
+    {
+      font-weight:bold;
+      color:#FFFFFF;
+      background-color:#98bf21;
+      text-align:center;
+      padding:4px;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    div.header a:hover,div.header a:active
+    {
+      background-color:#7A991A;
+    }
 
-      <!-- 
-      <h1 class="title"><a href="/about/index.html">About Me</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/archive/index.html">Archive</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/index.html">Home</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/resume/index.html">Resume</a></h1>
-      <span> </span>
-       -->
-    </div>
+    img.contact
+    {
+      width:32px;
+      height:32px;
+      transition:width 2s, height 2s;
+      -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    }
 
-    <div id="main" class="main">
-      
-    </div>
+    img.contact:hover
+    {
+      width:32px;
+      height:32px;
+      transform:rotate(-30deg);
+      -webkit-transform:rotate(-30deg); /* Safari and Chrome */
+    }
+    
 
-    <div class="footer">
-      <div class="contact">
+    </style>
+
+  </head>
+  <body>
+
+    <div class="site">
+      <div class="header">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+
+      <div class="main">
+        
+      </div>
+
+      <div class="footer">
         <p>
-          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png"></a><br />
+          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png" class="contact"></a>
+        </p>
+
+        <p>
+          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png" class="contact"></a>
+        </p>
+
+        <p>
+          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-32.png" class="contact"></a>
         </p>
       </div>
-      
-      <div class="contact">
-        <p>
-          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png"></a>
-        </p>
-      </div>
-
-      <div class="contact">
-        <p>
-          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-24.png"></a><br />
-        </p>
-      </div>
     </div>
-  </div>
 
-  <!-- ClickTale Bottom part -->
-  <div id="ClickTaleDiv" style="display: none;"></div>
-  <script type="text/javascript">
-  if(document.location.protocol!='https:')
-    document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
-  </script>
-  <!-- ClickTale end of Bottom part -->
+    <!-- ClickTale Bottom part -->
+    <div id="ClickTaleDiv" style="display: none;"></div>
+    <script type="text/javascript">
+    if(document.location.protocol!='https:')
+      document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+    </script>
+    <!-- ClickTale end of Bottom part -->
 
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  var pageTracker = _gat._getTracker("UA-6016902-1");
-  pageTracker._trackPageview();
-  </script>
-  <!-- Google Analytics end -->
-</body>
-</html>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-6016902-1");
+    pageTracker._trackPageview();
+    </script>
+    <!-- Google Analytics end -->
+  </body>
+  </html>

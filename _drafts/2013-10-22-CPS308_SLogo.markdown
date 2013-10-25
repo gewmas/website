@@ -7,5 +7,5 @@ categories: project
 
 I would like to talk about how we finish the SLogo game in Java.
 
-<a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png"></a>
+<a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32-red.png" onmouseover="this.src='../../../../asset/main/github-6-32.png'" onmouseout="this.src='../../../../asset/main/github-6-32-red.png'"></a>
 

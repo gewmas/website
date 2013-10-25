@@ -1,0 +1,10 @@
+---
+layout: project
+title:  "ECE590_Gobang"
+date:   2013-3-15 08:33:37
+categories: project
+---
+
+I would like to talk about how we finish the 2D Scrolling game in Java.
+
+<a href="https://github.com/myhgew/ECE590_Gobang"><img src="../../../../asset/main/github-6-32-red.png" onmouseover="this.src='../../../../asset/main/github-6-32.png'" onmouseout="this.src='../../../../asset/main/github-6-32-red.png'"></a>

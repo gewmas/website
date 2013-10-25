@@ -19,52 +19,95 @@
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
   <link rel="stylesheet" href="/css/pygment_trac.css" type="text/css" media="screen, projection" />
 
-  <style>
 
-    span.tab{
-        padding: 0 20px; /* Or desired space*/
-    }
+
+  <style type="text/css">
+
+
+  span.tab{
+    padding: 0 20px; /* Or desired space*/
+  }
   /*body
   {
     background-color:#b0c4de;
-  }*/
+    }*/
 
   /*.main
   {
     background-color:#d5d8d9;
-  }*/
-  </style>
+    }*/
 
-</head>
-<body>
+    /*div.main {background-color:#e1efbb;}*/
 
-  <div class="site">
-    <div class="header">
-      
-          <h1 class="title"><a href="/">Home</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/resume">Resume</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/archive">Archive</a></h1><span class="tab"></span>
-          <h1 class="title"><a href="/about">About</a></h1><span class="tab"></span>
-     
-      
+    div.header
+    {
+      width:100%;
+      height:63px;
+    }
+    div.header ul
+    {
+      list-style-type:none;
+      margin:0;
+      padding:0;
+    }
+    div.header li
+    {
+      float:left;
+    }
+    div.header a
+    {
+      display:block;
+      width:86px;
+    }
+    div.header a:link,div.header a:visited
+    {
+      font-weight:bold;
+      color:#FFFFFF;
+      background-color:#98bf21;
+      text-align:center;
+      padding:4px;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    div.header a:hover,div.header a:active
+    {
+      background-color:#7A991A;
+    }
 
-      <!-- 
-      <h1 class="title"><a href="/about/index.html">About Me</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/archive/index.html">Archive</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/index.html">Home</a></h1>
-      <span> </span>
-      
-      <h1 class="title"><a href="/resume/index.html">Resume</a></h1>
-      <span> </span>
-       -->
-    </div>
+    img.contact
+    {
+      width:32px;
+      height:32px;
+      transition:width 2s, height 2s;
+      -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    }
 
-    <div id="main" class="main">
-      <div id="home">
+    img.contact:hover
+    {
+      width:32px;
+      height:32px;
+      transform:rotate(-30deg);
+      -webkit-transform:rotate(-30deg); /* Safari and Chrome */
+    }
+    
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="site">
+      <div class="header">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resume">Resume</a></li>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <div id="home">
 	<!-- <h1>Project</h1>
 		<ul class="project">
 			
@@ -98,6 +141,10 @@
 				<!-- <p><p>I would like to talk about how we finish the 2D Scrolling game in Java.</p>
 </p> -->
 				
+				<li><span>15 Mar 2013</span> &raquo; <a href="/project/2013/03/15/2013-3-15-ECE590_Gobang.html">ECE590_Gobang</a></li>
+				<!-- <p><p>I would like to talk about how we finish the 2D Scrolling game in Java.</p>
+</p> -->
+				
 			</ul>
 		</p>
 		<p>
@@ -105,97 +152,59 @@
 			<ul class="life">
 				
 				<!--   -->
-				<li><span>22 Oct 2013</span> &raquo; <a href="/graphics/2013/10/22/GraphicsBasic.html">Graphics Basic</a></li>
-				<!-- <p><ol>
-    <li>
-        <h1>Graphics Basic</h1>
-        <ul>
-            <li>
-                <h2>Pixel</h2>
-                <p>
-                    1 bit grayscale</br>
-                    8 bit RGB (24 bits/pixel)</br>
-                    16 bit RBG (48 bits/pixel)</br>
-                </p>
-            </li>
-            <li>
-                <h2>2D transformations</h2>
-                <p>
-                    Translation</br>
-                    <img src="../../../../asset/graphics/translation.png"></br>
-                    Scaling</br>
-                    <img src="../../../../asset/graphics/scaling.png"></br>
-                    Rotation about z-axis</br>
-                    <img src="../../../../asset/graphics/rotationAboutZ.png"></br>
-                    Rotation about x-axis</br>
-                    <img src="../../../../asset/graphics/rotationAboutX.png"></br>
-                    Rotation about y-axis</br>
-                    <img src="../../../../asset/graphics/rotationAboutY.png"></br>
-                    Rotation about point</br>
-                    <img src="../../../../asset/graphics/rotationAboutPoint.png"></br>
-                    Rotation about axis</br>
-                    
-<div class="highlight"><pre><code class="c++">                      <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// z axis</span>
-                        <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-                    
-</code></pre></div>
+				<li><span>24 Oct 2013</span> &raquo; <a href="/leetcode/2013/10/24/LengthOfLastWord.html">Length of Last Word</a></li>
+				<!-- <p><h1>Question</h1>
 
-                    <img src="../../../../asset/graphics/rotationAboutVector1.png"></br>
-                    <img src="../../../../asset/graphics/rotationAboutVector2.png"></br>
-                </p>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <h1>OpenGL Drawing</h1>
-        <p>
-            Basic OpenGL function:
-            
-<div class="highlight"><pre><code class="c++">          <span class="kt">void</span> <span class="nf">glColor3f</span><span class="p">(</span><span class="n">GLfloat</span> <span class="n">red</span><span class="p">,</span> <span class="n">GLfloat</span> <span class="n">green</span><span class="p">,</span> <span class="n">GLfloat</span> <span class="n">blue</span><span class="p">);</span>
-            <span class="kt">void</span> <span class="nf">glRotatef</span><span class="p">(</span><span class="n">GLdouble</span> <span class="n">angle</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">x</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">y</span><span class="p">,</span> <span class="n">GLdouble</span> <span class="n">z</span><span class="p">);</span> 
-            <span class="cm">/*mode - GL POINTS, GL LINES,GL LINE STRIP, GL LINE LOOP GL TRIANGLES, GL TRIANGLE STRIP,</span>
-<span class="cm">           GL TRIANGLE FAN, GL QUADS, GL QUAD STRIP, and GL POLYGON*/</span>
-            <span class="kt">void</span> <span class="nf">glBegin</span><span class="p">(</span><span class="n">GLenum</span> <span class="n">mode</span><span class="p">);</span> <span class="n">glEnd</span><span class="p">();</span>
-            
-</code></pre></div>
-
-        </p>
-        <p>
-            <script src="https://gist.github.com/myhgew/5f82ed47097eb06baa91.js"></script>
-        </p>
-    </li>
-    <li>
-        <h1>Shading</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Viewing</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Texture Mapping</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Sampling and Reconstruction</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Ray Tracing</h1>
-        <p>
-        </p>
-    </li>
-    <li>
-        <h1>Line Drawing</h1>
-        <p>
-        </p>
-    </li>
-</ol>
+<p>
+    Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string. </br>
+    If the last word does not exist, return 0.</br>
+    Note: A word is defined as a character sequence consists of non-space characters only.</br>
+    For example,</br>
+    Given s = "Hello World",</br>
+    return 5.
+</p>
 </p> -->
+				<!--  -->
+				
+				<!--   -->
+				<li><span>22 Oct 2013</span> &raquo; <a href="/graphics/2013/10/22/GraphicsBasic.html">Graphics Basic</a></li>
+				<!-- <p><ul id="menu">
+    <li><span>&#x25bc;</span><b>Graphics Basic</b>
+    <ul>
+        <li><h2>Pixel</h2></li>
+            <p>
+                1 bit grayscale</br>
+                8 bit RGB (24 bits/pixel)</br>
+                16 bit RBG (48 bits/pixel)</br>
+            </p>
+        
+        <li><h2>2D transformations</h2></li>
+            <p>
+                Translation</br>
+                <img src="../../../../asset/graphics/translation.png"></br>
+                Scaling</br>
+                <img src="../../../../asset/graphics/scaling.png"></br>
+                Rotation about z-axis</br>
+                <img src="../../../../asset/graphics/rotationAboutZ.png"></br>
+                Rotation about x-axis</br>
+                <img src="../../../../asset/graphics/rotationAboutX.png"></br>
+                Rotation about y-axis</br>
+                <img src="../../../../asset/graphics/rotationAboutY.png"></br>
+                Rotation about point</br>
+                <img src="../../../../asset/graphics/rotationAboutPoint.png"></br>
+                Rotation about axis</br>
+                
+<div class="highlight"><pre><code class="c++">              <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// z axis</span>
+                <span class="n">glRotatef</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mf">0.707</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+                
+</code></pre></div>
+
+                <img src="../../../../asset/graphics/rotationAboutVector1.png"></br>
+                <img src="../../../../asset/graphics/rotationAboutVector2.png"></br>
+            </p>
+    </ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;/li&gt;
+</code></pre></div></p> -->
 				<!--  -->
 				
 				<!--   -->
@@ -223,13 +232,6 @@
 				<!--  -->
 				
 				<!--   -->
-				<li><span>21 Oct 2013</span> &raquo; <a href="/jekyll/update/2013/10/21/2013-10-21-welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-				<!-- <p><p>You&#39;ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
-To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
-</p> -->
-				<!--  -->
-				
-				<!--   -->
 				<li><span>15 Sep 2013</span> &raquo; <a href="/project/2013/09/15/2013-9-15-CPS308_Springies.html">CPS308_Springies</a></li>
 				<!-- <p><p>I would like to talk about how we finish the Springies game in Java.</p>
 </p> -->
@@ -241,55 +243,55 @@ To add new posts, simply add a file in the <code>_posts</code> directory that fo
 </p> -->
 				<!--  -->
 				
+				<!--   -->
+				<li><span>15 Mar 2013</span> &raquo; <a href="/project/2013/03/15/2013-3-15-ECE590_Gobang.html">ECE590_Gobang</a></li>
+				<!-- <p><p>I would like to talk about how we finish the 2D Scrolling game in Java.</p>
+</p> -->
+				<!--  -->
+				
 			</ul>
 		</p>
 		<!-- <script src="https://gist.github.com/7101516.js"> </script> -->
 
 		
 	</div>
-    </div>
-
-    <div class="footer">
-      <div class="contact">
-        <p>
-          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png"></a><br />
-        </p>
-      </div>
-      
-      <div class="contact">
-        <p>
-          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png"></a>
-        </p>
       </div>
 
-      <div class="contact">
+      <div class="footer">
         <p>
-          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-24.png"></a><br />
+          <a href="https://www.facebook.com/myhgew"><img src="../../../../asset/main/facebook-3-32.png" class="contact"></a>
+        </p>
+
+        <p>
+          <a href="https://github.com/myhgew"><img src="../../../../asset/main/github-6-32.png" class="contact"></a>
+        </p>
+
+        <p>
+          <a href="mailto:myhgew@gmail.com"><img src="../../../../asset/main/gmail-login-32.png" class="contact"></a>
         </p>
       </div>
     </div>
-  </div>
 
-  <!-- ClickTale Bottom part -->
-  <div id="ClickTaleDiv" style="display: none;"></div>
-  <script type="text/javascript">
-  if(document.location.protocol!='https:')
-    document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
-  </script>
-  <!-- ClickTale end of Bottom part -->
+    <!-- ClickTale Bottom part -->
+    <div id="ClickTaleDiv" style="display: none;"></div>
+    <script type="text/javascript">
+    if(document.location.protocol!='https:')
+      document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRb.js'%20type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    if(typeof ClickTale=='function') ClickTale(206,0.3,"www03");
+    </script>
+    <!-- ClickTale end of Bottom part -->
 
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  var pageTracker = _gat._getTracker("UA-6016902-1");
-  pageTracker._trackPageview();
-  </script>
-  <!-- Google Analytics end -->
-</body>
-</html>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-6016902-1");
+    pageTracker._trackPageview();
+    </script>
+    <!-- Google Analytics end -->
+  </body>
+  </html>
