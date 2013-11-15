@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Home</title>
+  <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width">
 
   <!-- Overal CSS -->
@@ -83,9 +83,9 @@
       <div class="float-left">
         <h1>Project</h1>
         <ul class="project">
-          
-          <li>15 Sep 2013 &raquo; <a href="/project/2013/09/15/iLogo.html">iLogo Development Notes</a></li>
-          
+          {% for post in site.categories.project %}
+          <li>{{ post.date | date_to_string }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </div> <!--.story-->
@@ -97,27 +97,11 @@
       <div class="float-right">
         <h1>Posts</h1>
         <ul class="life">
-          
-           
-          <li><span>24 Oct 2013</span> &raquo; <a href="/leetcode/2013/10/24/LengthOfLastWord.html">Length of Last Word</a></li>
-          
-          
-           
-          <li><span>22 Oct 2013</span> &raquo; <a href="/graphics/2013/10/22/GraphicsBasic.html">Graphics Basic</a></li>
-          
-          
-           
-          <li><span>22 Oct 2013</span> &raquo; <a href="/design_pattern/2013/10/22/DesignPatternSummary.html">Design Pattern Summary</a></li>
-          
-          
-           
-          <li><span>21 Oct 2013</span> &raquo; <a href="/life/2013/10/21/HelloWorld.html">Hello World</a></li>
-          
-          
-           
-          <li><span>15 Sep 2013</span> &raquo; <a href="/project/2013/09/15/iLogo.html">iLogo Development Notes</a></li>
-          
-          
+          {% for post in site.posts %}
+          {% if post.categories != project %} 
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+          {% endfor %}
         </ul>
       </div>
     </div> <!--.story-->
@@ -129,13 +113,10 @@
       <div class="float-left">
         <h1>Posts</h1>
         <ul class="project">
-          
-          <li><span>15 Sep 2013</span> &raquo; <a href="/project/2013/09/15/iLogo.html">iLogo Development Notes</a></li>
-          <!-- <p><h1>Overview</h1>
-
-<p>iLogo is a Logo turtle game on iPhone. I transplanted it from the course project called sLogo. Fabio and I were in charge of the BackEnd and iLogo serves an opportunity to learn how to code for FrontEnd.</p>
-</p> -->
-          
+          {% for post in site.categories.project %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+          <!-- <p>{{ post.excerpt }}</p> -->
+          {% endfor %}
         </ul>
       </div>
     </div> <!--.story-->

@@ -2,62 +2,48 @@
 layout: default
 ---
 
-<style>
-    /*#menu ul li {
-        display:none;
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+
+
+$(window).load(function () {
+
+
+  $("#menu span").click(function(){
+    $(this).first().parent().children("ul").children().toggle();
+    if($(this).html().charAt(0)  == "\u25bc"){
+      $(this).html("&#x25b6;");
+
+    } else {
+      $(this).html("&#x25bc;");
+
     }
-
-    #menu span {
-        color: #ace;
-    }
-    li {
-        list-style-type: none;
-        }*/
-        </style>
-
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script>
+    return false;
+  });
 
 
-        $(window).load(function () {
+});
+
+</script>
 
 
-          $("#menu span").click(function(){
-            $(this).first().parent().children("ul").children().toggle();
-            if($(this).html().charAt(0)  == "\u25bc"){
-              $(this).html("&#x25b6;");
-
-            } else {
-              $(this).html("&#x25bc;");
-
-            }
-            return false;
-          });
 
 
-        });
 
-        </script>
+<h2>{{ page.title }}</h2>
+<p class="meta">{{ page.date | date_to_string }}</p>
 
-        <h2>{{ page.title }}</h2>
-        <p class="meta">{{ page.date | date_to_string }}</p>
+<div class="post">
+  {{ content }}
+</div>
 
-        <div class="post">
-          {{ content }}
-        </div>
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
 
-        <div id="related">
-          <h2>Related Posts</h2>
-          <ul class="posts">
-            {% for post in site.related_posts limit:3 %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <!-- {% if page.fb_comments or page.comments %} -->
-        <div class="content sub">
-          <h2 id="comments">Comments</h2>
-          <div class="fb-comments" data-href="http://rsms.me{{ page.url }}" data-num-posts="{{ page.fb_comments }}" data-width="550" data-font="arial"></div>
-        </div>
-<!-- {% endif %} -->

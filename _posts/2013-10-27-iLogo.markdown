@@ -1,0 +1,17 @@
+---
+layout: project
+title:  "iLogo Development Notes"
+date:   2013-9-15 08:33:37
+categories: project
+---
+
+<h1>Overview</h1>
+<p>iLogo is a Logo turtle game on iPhone. I transplanted it from the course project called sLogo. Fabio and I were in charge of the BackEnd and iLogo serves an opportunity to learn how to code for FrontEnd.</p>
+
+<h1>Notes</h1>
+<!-- subclass not duplcated include, trim string, textfield, view -->
+<p></p>
+
+<h1>Product</h1>
+<p></p>
+<!-- <a href="https://github.com/myhgew/CPS308_Springies"><img src="../../../../asset/main/github-6-32-red.png" onmouseover="this.src='../../../../asset/main/github-6-32.png'" onmouseout="this.src='../../../../asset/main/github-6-32-red.png'"></a> -->
