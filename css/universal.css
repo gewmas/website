@@ -79,73 +79,49 @@ span.tab{
 
     .menu-item {border-left:1px solid #404040; font-size:18px;}
 
-/*#header ul
-      {
-        list-style-type:none;
-        margin:0;
-        padding:0;
-      }
-      #header li
-      {
-        float:left;
-      }
-      #header a
-      {
-        display:block;
-        width:86px;
-      }
-      #header a:link,div.header a:visited
-      {
-        font-weight:bold;
-        color:#FFFFFF;
-        background-color:#98bf21;
-        text-align:center;
-        padding:4px;
-        text-decoration:none;
-        text-transform:uppercase;
-      }
-      #header a:hover,div.header a:active
-      {
-        background-color:#7A991A;
-        }*/
 
-        /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
-        #container { margin:0 auto; overflow:auto; padding:80px 0; width:940px; }
-        #content{}
-
-        /* Make Footer Sticky */
-        #footer_container { 
-          text-align:center; 
-          background:#fff; 
-          bottom:0; 
-          height:40px; 
-          left:0; 
-          position:fixed; 
-          width:100%; 
-        }
-        #footer { 
-          text-align:center; 
-          line-height:60px; 
-          margin:0 auto; 
-          width:940px; 
-          /*text-align:center; */
-        }
+    /*Main Page Post format*/
+    .post a:link {color:#fff; text-decoration:none;}    /* unvisited link */
+    .post a:visited {color:#fff; text-decoration:none;} /* visited link */
+    .post a:hover {color:#fff; text-decoration:underline;}   /* mouse over link */
+    .post a:active {color:#fff; text-decoration:underline;}  /* selected link */
 
 
 
+    /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
+    #container { margin:0 auto; overflow:auto; padding:80px 0; width:940px; }
+    #content{}
 
-        img.contact
-        {
-          width:32px;
-          height:32px;
-          transition:width 2s, height 2s;
-          -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
-        }
+    /* Make Footer Sticky */
+    #footer_container { 
+      text-align:center; 
+      background:#fff; 
+      bottom:0; 
+      height:40px; 
+      left:0; 
+      position:fixed; 
+      width:100%; 
+    }
+    #footer { 
+      text-align:center; 
+      line-height:60px; 
+      margin:0 auto; 
+      width:940px; 
+      /*text-align:center; */
+    }
 
-        img.contact:hover
-        {
-          width:32px;
-          height:32px;
-          transform:rotate(-30deg);
-          -webkit-transform:rotate(-30deg); /* Safari and Chrome */
-        }
+    /*Contact Animation*/
+    img.contact
+    {
+      width:24px;
+      height:24px;
+      transition:width 2s, height 2s;
+      -webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    }
+    img.contact:hover
+    {
+      width:24px;
+      height:24px;
+      transform:rotate(-30deg);
+      -webkit-transform:rotate(-30deg); /* Safari and Chrome */
+    }

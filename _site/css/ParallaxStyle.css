@@ -79,50 +79,55 @@ h2{
 	margin: 0 0 10px 0;	
 }
 
-#header, #intro, #second{
+#header, #intro, #second, #third{
 	width: 100%;
 }
 
 #intro{
-	background:url(../images/firstBG.jpg) 50% 0 no-repeat fixed;
+	background-color: #334145;
+	/*background:url(../images/firstBG.jpg) 50% 0 no-repeat fixed;*/
 	color: white;
-	height: 1200px;
+	height: 500px;
 	margin: 0 auto;
 	padding: 0;
 }
 
 #second{
-	background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;
+	background-color: #0F4FA8;
+	/*background: url(../images/secondBG.jpg) 50% 0 no-repeat fixed;*/
 	color: white;
-	height: 1200px;
+	height: 500px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
 }
 
-#second .bg{
-	background: url(../images/trainers.png) 50% 0 no-repeat fixed;
-	height: 1300px;
+#third{
+	background-color: #4380D3;
+	/*background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;*/
+	color: white;
+	height: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 0 0 0;	
+}
+
+/*#third .bg{
+	background: url(../images/cloud-sm1.png) 50% 0 no-repeat fixed;
+	height: 2000px;
+	width: 900px;
 	margin: 0 auto;
 	padding: 0;
 	position: absolute;
-	width: 900px;
-	z-index: 200;
-}
+	z-index: 200;	
+}*/
 
-#third{
-	background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
-	color: white;
-	height: 1200px;
-	padding: 100px 0 0 0;	
-}
-
-#fifth{
+/*#fifth{
 	background: #ccc;
 	height: 400px;
 	margin: 0 auto;
 	padding: 40px 0 0 0;
-}
+}*/
 
 .story{
 	margin: 0 auto;

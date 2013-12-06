@@ -10,20 +10,20 @@
   <link rel="stylesheet" href="css/universal.css">
 
   <!-- syntax highlighting CSS -->
-  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="css/syntax.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 
-  <link rel="stylesheet" media="screen, projection" href="/css/screen.css" type="text/css">
-  <link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/960.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/text.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="/css/pygment_trac.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/960.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/text.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="css/pygment_trac.css" type="text/css" media="screen, projection" />
 
   <!-- Parallax Scrolling-->
-  <link href="scripts/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/ParallaxStyle.css" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
   <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
@@ -42,10 +42,12 @@
   $('#intro').parallax("50%", 0.1);
   $('#second').parallax("50%", 0.1);
   $('.bg').parallax("50%", 0.4);
-  $('#third').parallax("50%", 0.3);
+  $('#third').parallax("50%", 0.1);
 
 })
 </script><!-- Parallax Scrolling-->
+
+
 
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -57,24 +59,26 @@
 
 </head>
 
+
+
 <body>
   <!-- Make sure header on the top -->
   <div id="header_container" style="z-index:100;"> 
     <div id="header">
       <ul>
         <li class="menu-item"><a href="/">Home</a></li>
-        <li class="menu-item"><a href="resume/index.html">Resume</a></li>
-        <li class="menu-item"><a href="archive/index.html">Archive</a></li>
-        <li class="menu-item"><a href="about/index.html">About</a></li>
+        <li class="menu-item"><a href="/resume/index.html">Resume</a></li>
+        <li class="menu-item"><a href="/archive/index.html">Archive</a></li>
+        <li class="menu-item"><a href="/about/index.html">About</a></li>
       </ul>
     </div>
   </div>
 
   <!-- Navigation bar on the right -->
   <ul id="nav">
-    <li><a href="#intro" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-    <li><a href="#second" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
-    <li><a href="#third" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li>
+    <li><a href="#intro" title="Next Section"><img src="/asset/images/dot.png" alt="Link" /></a></li>
+    <li><a href="#second" title="Next Section"><img src="/asset/images/dot.png" alt="Link" /></a></li>
+    <!-- <li><a href="#third" title="Next Section"><img src="/asset/images/dot.png" alt="Link" /></a></li> -->
     <!-- <li><a href="#fifth" title="Next Section"><img src="images/dot.png" alt="Link" /></a></li> -->
   </ul>
 
@@ -82,21 +86,21 @@
     <div class="story">
       <div class="float-left">
         <h1>Project</h1>
-        <ul class="project">
+        <ul class="post">
           {% for post in site.categories.project %}
           <li>{{ post.date | date_to_string }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
-    </div> <!--.story-->
-  </div> <!--#intro-->
+    </div> 
+  </div> 
 
   <div id="second">
     <div class="story">
       <!-- <div class="bg"></div> -->
       <div class="float-right">
         <h1>Posts</h1>
-        <ul class="life">
+        <ul class="post">
           {% for post in site.posts %}
           {% if post.categories != project %} 
           <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -104,35 +108,31 @@
           {% endfor %}
         </ul>
       </div>
-    </div> <!--.story-->
+    </div> 
+  </div> 
 
-  </div> <!--#second-->
-
-  <div id="third">
+  <!-- <div id="third">
     <div class="story">
       <div class="float-left">
         <h1>Posts</h1>
-        <ul class="project">
+        <ul class="post">
           {% for post in site.categories.project %}
           <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-          <!-- <p>{{ post.excerpt }}</p> -->
           {% endfor %}
         </ul>
       </div>
-    </div> <!--.story-->
-  </div> <!--#third-->
+    </div>
+  </div>  -->
 
-  <!-- <div id="fifth">     -->
-  <!-- </div> -->
 
 
   <div id="footer_container" style="padding:1px;">
     <div id="footer">
-    <a href="https://www.facebook.com/myhgew"><img src="asset/main/facebook-3-32.png" class="contact"></a>
+      <a href="https://www.facebook.com/myhgew"><img class="contact" src="/asset/main/facebook-3-32.png"></a>
       <span class="tab"></span>
-      <a href="https://github.com/myhgew"><img src="asset/main/github-6-32.png" class="contact"></a>
+      <a href="https://github.com/myhgew"><img class="contact" src="/asset/main/github-6-32.png"></a>
       <span class="tab"></span>
-      <a href="mailto:myhgew@gmail.com"><img src="asset/main/gmail-login-32.png" class="contact"></a>
+      <a href="mailto:myhgew@gmail.com"><img class="contact" src="/asset/main/gmail-login-24.png"></a>
     </div>
   </div>
 
